@@ -1,0 +1,7 @@
+<view class="header" >
+    <text class="title">{{textContent.title}}</text>
+    <view>
+        <text>{{textContent.des}}</text>
+        <text class="more">查看更多</text>
+    </view>
+</view>

@@ -1,0 +1,109 @@
+/**index.wxss**/
+/* <!-- 轮播图 --> */
+.indexContainer {
+    width: 100%;
+}
+.banners {
+    width: 100%;
+    height: 300rpx;
+}
+.banners image {
+    width: 100%;
+    height: 100%;
+}
+/* <!-- 五个图标导航区域 --> */
+
+.navContainer {
+    display: flex;
+    margin-top: 20rpx;
+}
+.nav_item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav_item .iconfont {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    line-height: 100rpx;
+    text-align: center;
+    background-color: rgb(240,19,19);
+    color: white;
+    font-size: 50rpx;
+    margin-bottom: 20rpx;
+}
+.nav_item text:nth-child(2) {
+    font-size: 30rpx;
+}
+
+/* 推荐歌曲 */
+.recommendContainer{
+    padding: 15rpx;
+}
+
+/* 滚动区域 */
+.recommendContent {
+    display: flex;
+    height: 280rpx;
+}
+.scroll_item {
+    width: 200rpx;
+    display: flex;
+    flex-direction: column;
+    margin: 7rpx;
+    
+}
+.scroll_item image {
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 10rpx;
+    overflow: hidden;
+    margin-bottom: 10rpx;
+}
+.scroll_item text {
+    font-size: 28rpx;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+/* 排行榜 */
+.topList {
+    padding: 15rpx;
+}
+.topListContent {
+    height: 450rpx;
+}
+.topContentitem {
+    width: 90%!important;
+    background-color: #FBFBFB;
+}
+.topListContent .title {
+    padding: 20rpx 0;
+}
+.topListContent .songs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15rpx;
+}
+.topListContent .songs image {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 10rpx;
+}
+.topListContent .songs .number {
+    width: 100rpx;
+    height: 100rpx;
+    text-align: center;
+    line-height: 100rpx;
+}
+.topListContent .songs .song_name {
+    font-size: 28rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

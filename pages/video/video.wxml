@@ -1,0 +1,64 @@
+<veiw class="videoContainer">
+    <!-- 头部区域 -->
+    <view class="header">
+        <image src="/static/images/video/video.jpg" />
+        <view class="serach" bindtap="toSearch">搜索你想看的视频</view>
+        <image src="/static/images/logo.png" />
+    </view>
+    <!-- 导航区域 -->
+    <!-- scroll-into-view 设置子元素滚动，需要匹配子元素唯一的id id值需要字母开头 scroll-with-animation设置子元素过度动画 -->
+    <scroll-view scroll-x class="navScroll" enable-flex scroll-into-view="{{'scroll'+navid}}" scroll-with-animation>
+        <!-- 子元素的id设置为{{'scroll'+item.id}} 这样就是字母开头 -->
+        <view class="navItem" wx:for="{{navList}}" wx:key="id" id="{{'scroll'+item.id}}">
+            <view class="navContent {{item.id === navid?'active':''}}" 
+            bindtap="handleCurrent" 
+            data-navid="{{item.id}}"
+            >
+            {{item.name}}
+            </view>
+        </view>
+    </scroll-view>
+    <!-- 视频内容区域 -->
+    <scroll-view scroll-y class="videoScroll"  refresher-enabled bindrefresherrefresh="refresherrefresh" refresher-triggered="{{scrollRefresher}}" bindscrolltolower="scrolltolower">
+        <view class="videoItem" wx:for="{{videoList}}" wx:key="id">
+            <!-- 视频 -->
+            <video src="{{item.data.urlInfo.url}}" 
+            bindplay="handlePlay" 
+            id="{{item.data.vid}}" 
+            poster="{{item.data.coverUrl}}"
+            wx:if="{{item.data.vid === videoId}}"
+            object-fit="fill"
+            bindtimeupdate="videoUplateTime"
+            bindended="videoPlayEnd"
+
+            ></video>
+
+            <!-- 性能优化 使用image图片代替video标签 -->
+            <image src="{{item.data.coverUrl}}" 
+            class="videoImage" 
+            bindtap="handlePlay"
+            id="{{item.data.vid}}" 
+            wx:else
+            />
+
+            <view class="content">{{item.data.title}}</view>
+            <view class="footer">
+                <image class="avatar" src="{{item.data.creator.avatarUrl}}"></image>
+                <text class="nickName">{{item.data.creator.nickname}}</text>
+                <view class="comments_praised">
+                    <text class="item">
+                        <text class="iconfont icon-buoumaotubiao15"></text>
+                        <text class="count">{{item.data.praisedCount}}</text>
+                    </text>
+                    <text class="item">
+                        <text class="iconfont icon-pinglun1"></text>
+                        <text class="count">{{item.data.commentCount}}</text>
+                    </text>
+                    <button open-type="share" class="item btn" >
+                        <text class="iconfont icon-gengduo"></text>
+                    </button>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</veiw>

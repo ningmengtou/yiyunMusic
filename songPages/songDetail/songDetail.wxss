@@ -1,0 +1,135 @@
+/* pages/songDetail/songDetail.wxss */
+/* 独立分包需要重新引入字体和样式 */
+@import '../iconfont/iconfont.wxss';
+page {
+    height: 100%;
+}
+
+.songDetailContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+}
+.songDetailContainer .author {
+    height: 60rpx;
+    width: 100%;
+    line-height: 60rpx;
+    text-align: center;
+}
+.songDetailContainer .cirle {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 100;
+
+}
+.songDetailContainer .needle {
+    position: relative;
+    left: 58rpx;
+    top: -27rpx;
+    width: 192rpx;
+    height: 274rpx;
+    z-index: 99;
+    /* 设置旋转中心点,并且逆时针旋转30° */
+    transform-origin: 30rpx 0;
+    transition: all 0.7s;
+}
+.songDetailContainer .isPlay {
+    transform: rotate(-25deg);
+}
+.songDetailContainer .discContainer {
+    position: relative;
+    top: -165rpx;
+    width: 598rpx;
+    height: 598rpx;
+}
+/* 给磁盘指定动画 1s延迟 */
+.discAnimation {
+    animation: disc 3.5s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes disc {
+    from{}
+    to{
+        transform:rotate(360deg)
+    }
+}
+
+.songDetailContainer .discContainer .disc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 598rpx;
+    height: 598rpx;
+    z-index: 98;
+}
+.songDetailContainer .discContainer .authorTmage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 598rpx;
+    height: 598rpx;
+    transform: scale(.6);
+}
+.progressControl {
+    position: absolute;
+    bottom: 180rpx;
+    width: 640rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    display: flex;
+    align-items: center;
+}
+.barControl {
+    position: relative;
+    width: 430rpx;
+    height: 4rpx;
+    background-color: rgba(0,0,0,0.4);
+}
+.audioBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 这里宽度设置为0 之后动态生成宽度 */
+    width: 0;
+    height: 4rpx;
+    background-color: red;
+    z-index: 1;
+}
+.barCirle {
+    position: absolute;
+    top: -4rpx;
+    right: -6rpx;
+    width: 12rpx;
+    height: 12rpx;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.progressControl text {
+    flex: 1;
+    text-align: center;
+}
+.musicContainer {
+    position: absolute;
+    bottom: 10rpx;
+    left: 0;
+    width: 100%;
+    display: flex;
+    border-top: 1rpx solid #fff;
+    padding-top: 20rpx;
+}
+.musicContainer .iconfont {
+    flex: 1;
+    font-size: 50rpx;
+    height: 120rpx;
+    line-height: 120rpx;
+    text-align: center;
+    color: #fff;
+}
+.musicContainer .iconfont:nth-child(3) {
+    font-size: 90rpx;
+}

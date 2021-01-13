@@ -1,0 +1,174 @@
+.searchContainer {
+    padding: 20rpx;
+}
+.searchContainer .header {
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+}
+.searchContainer .header .searchBox {
+    position: relative;
+    flex: 1;
+    display: flex;
+    border-radius: 30rpx;
+    background-color: rgba(237,237,237,.5);
+}
+.header .searchBox .searchIcon {
+    width: 80rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 50rpx;
+}
+.header .searchBox input {
+    flex: 1;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+.header .searchBox .clear {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 60rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    background-color: #ccc;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.searchContainer .header .cancel{
+    width: 120rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+}
+.placeholder {
+    color: #d43c33;
+}
+.hotSearch {
+    margin-top: 15rpx;
+}
+.hotSearchTitle {
+    height: 60rpx;
+    width: 100%;
+    border-bottom: 1rpx solid #ccc;
+}
+.hotSearchList {
+    margin-top: 15rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+.hotSearchList .item {
+    width: 50%;
+    height: 70rpx;
+    line-height: 70rpx;
+    padding-left: 10rpx;
+    font-size: 30rpx;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.hotSearchList .item:nth-child(-n+3) {
+    font-weight: 600;
+}
+.hotSearchList .item .order {
+    margin-right: 10rpx;
+}
+
+.hotSearchList .item .iconImage {
+    width: 35rpx;
+    height: 20rpx;
+    margin-left: 10rpx;
+}
+/* 搜索内容区 */
+.searchTitle {
+    height: 100rpx;
+    line-height: 100rpx;
+    padding-left: 10rpx;
+    font-size: 34rpx;
+    border-bottom: 2rpx solid rgb(71, 122, 218);
+    color: rgb(71, 122, 218);
+}
+.searchList .item{
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 30rpx;
+    border-bottom: 1rpx solid #ccc
+}
+.searchName {
+    margin-left: 15rpx;
+}
+/* 历史记录区 */
+.historyContent {
+    position: relative;
+    padding-top: 20rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+.historyContent .title {
+    font-size: 30rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    margin-right: 20rpx;
+}
+.historyItem {
+    padding: 0 20rpx;
+    background-color: #ccc;
+    border-radius: 20rpx;
+    margin-right: 20rpx;
+    margin-bottom: 20rpx;
+    font-size: 30rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+}
+.historyContent .iconfont {
+    position: absolute;
+    font-size: 50rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    right: 0;
+    bottom: 20rpx;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

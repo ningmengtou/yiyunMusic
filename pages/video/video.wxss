@@ -1,0 +1,110 @@
+/* pages/video/video.wxss */
+/* 头部区域 */
+.header {
+    display: flex;
+    padding: 10rpx;
+}
+.serach {
+    flex: 1;
+    line-height: 70rpx;
+    padding-left: 20rpx;
+    text-align: center;
+    border: 2rpx solid #ccc;
+    border-radius: 30rpx;
+    margin: 0 15rpx;
+    color: #d43c33;
+    font-size: 28rpx;
+    box-shadow: 0 0 10rpx rgba(0,0,0,.3);
+}
+.header image {
+    width: 70rpx;
+    height: 70rpx;
+}
+
+/* 导航区域 */
+.navScroll {
+    display: flex;
+    height: 80rpx;
+    white-space: nowrap;
+    padding-bottom: 10rpx;
+}
+.navItem {
+    padding: 10rpx 20rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+.navItem .active {
+    border-bottom: 5rpx solid #d43c33;
+}
+
+/* 视频内容区域 */
+.videoScroll {
+    padding: 0 3%;
+    box-sizing: border-box;
+    /* calc可以动态计算值 */
+    height: calc(100vh - 184rpx);
+}
+.videoScroll .videoItem video{
+    width: 100%;
+    height: 360rpx;
+    border-radius: 15rpx;
+}
+.videoItem .content {
+    font-size: 26rpx;
+    height:80rpx;
+    line-height: 80rpx;
+    max-width: 500rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+.videoImage {
+  width: 100%;
+  height: 360rpx;
+  border-radius: 15rpx;
+  /* transform: translateY(-360rpx); */
+}
+  
+  /* footer */
+  .footer {
+    border-top: 1rpx solid #eee;
+    padding: 20rpx 0;
+  }
+  .footer .avatar {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+  
+  .footer  .nickName {
+    font-size: 26rpx;
+    vertical-align: middle;
+    margin-left: 20rpx;
+  }
+  
+  .footer .comments_praised {
+    float: right;
+  }
+  
+  .comments_praised .btn {
+    display: inline;
+    padding: 0;
+    background-color: transparent;
+    border-color: transparent;
+  }
+  
+  .comments_praised .btn:after {
+    border: none;
+  }
+  
+  .comments_praised .item {
+    margin-left: 50rpx;
+    position: relative;
+  }
+  
+  .comments_praised .item .count {
+    position: absolute;
+    top: -20rpx;
+    font-size: 20rpx;
+  }

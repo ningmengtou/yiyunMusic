@@ -1,0 +1,21 @@
+/* components/Title/Title.wxss */
+.header {
+    margin-bottom: 15rpx;
+}
+.header .title {
+    font-size: 30rpx;
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 10rpx;
+}
+.header view {
+    display: flex;
+    justify-content: space-between;
+}
+.header .more {
+    border-radius: 15rpx;
+    padding: 10rpx 20rpx;
+    border: 1rpx solid rgb(240,19,19);
+    font-size: 25rpx;
+    color: rgb(240,19,19);
+}

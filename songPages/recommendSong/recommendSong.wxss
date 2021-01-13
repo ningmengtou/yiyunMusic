@@ -1,0 +1,70 @@
+/* pages/recommendSong/recommendSong.wxss */
+/* 独立分包需要重新引入字体和样式 */
+@import '../iconfont/iconfont.wxss';
+page {
+    height: 100%;
+}
+/* 头部区域 */
+.recommendSongContainer .header{
+    position: relative;
+   width: 100%;
+   height: 300rpx;
+}
+.recommendSongContainer .header image {
+    width: 100%;
+    height: 100%;
+}
+.recommendSongContainer .header text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    font-size: 35rpx;
+}
+/* 列表区域 */
+.recommendSongList {
+    position: relative;
+    top: -25rpx;
+    background-color: #fff;
+    border-radius: 35rpx;
+    padding: 0 20rpx;
+}
+.recommendSongList .title {
+    display: flex;
+    justify-content: space-between;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+.recommendSongList .scrollSong {
+    height: calc(100vh - 380rpx);
+}
+.recommendSongList .scrollSong .scrollSongItem{
+    display: flex;
+    align-items: center;
+    height: 100rpx;
+}
+.recommendSongList .scrollSong .scrollSongItem image {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 10rpx;
+}
+.recommendSongList .scrollSong .scrollSongItem .songDetail {
+    flex: 1;
+    padding-left: 30rpx;
+    font-size: 26rpx;
+}
+.scrollSong .scrollSongItem .songDetail .songName,
+.scrollSong .scrollSongItem .songDetail .songAuthor {
+    max-width: 500rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.recommendSongList .scrollSong .scrollSongItem .iconfont {
+    height: 80rpx;
+    width: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 50rpx;
+}
